@@ -1,0 +1,323 @@
+@import 'var';
+
+/* common css */
+.margin{
+  margin: 0 auto;
+}
+.width{
+  width: 1766px;
+  @extend .margin;
+  @media screen and (max-width: 1800px){
+    width: 96%;
+  }
+}
+.wid{
+  width: 1320px;
+  @extend .margin;
+  @media screen and (max-width: 1370px){
+    width: 80%;
+  }
+  @media screen and (max-width: 1250px){
+    width: 94%;
+  }
+}
+.hei{
+  height: $width;
+}
+.flex {
+	display: $flex;
+	justify-content: center;
+	align-items: center;
+}
+.flex-sb {
+	display: $flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.ttu{
+	text-transform: uppercase;
+}
+.anim{
+  transition: all .3s;
+}
+.anim2{
+  transition: all .5s;
+}
+.fhd{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  display: -webkit-box;
+  /*!autoprefixer:off*/
+  -webkit-box-orient: vertical;
+  /*autoprefixer:on*/
+}
+.fhd1{
+  @extend .fhd;
+  -webkit-line-clamp: 1;
+}
+.fhd2{
+  @extend .fhd;
+  -webkit-line-clamp: 2;
+}
+.fhd3{
+  @extend .fhd;
+  -webkit-line-clamp: 3;
+}
+.fhd4{
+  @extend .fhd;
+  -webkit-line-clamp: 4;
+}
+.fhd5{
+  @extend .fhd;
+  -webkit-line-clamp: 5;
+}
+.fhd6{
+  @extend .fhd;
+  -webkit-line-clamp: 6;
+}
+.fixed{
+  position: fixed;
+  z-index: 99999;
+  height: 50px;
+  background: $white;
+  width: $width;
+}
+.swipe_li{
+  margin: 0;
+  position: relative;
+}
+
+@mixin btn($btn_color){
+  i{
+    @extend .anim;
+    width: 34px;
+    height: 34px;
+    border-radius: 50px;
+    border: 1px solid $btn_color;
+    margin-bottom: 20px;
+    &:before{
+      color: $btn_color;
+    }
+  }
+  span{
+    display: block;
+    font-size: $fs4;
+    font-family: $fm1;
+    color: $btn_color;
+    @media screen and (max-width: 1250px){
+      font-size: $fs5;
+    }
+    @media screen and (max-width: 500px){
+      font-size: $fs6;
+    }
+  }
+  &:hover{
+    i{
+      border-color: $color;
+      background: $color;
+    }
+  }
+}
+@mixin pb($wids1, $wids2, $wids3){
+  height: $wids1;
+  overflow: hidden;
+  position: relative;
+  .pb_item{
+    .pb_tit{
+      width: $wids2;
+      justify-content: flex-start;
+      h5{
+        font-size: $fs3;
+        color: $color;
+        font-family: $fm6;
+        @media screen and (max-width: 1000px){
+          font-size: $fs4;
+        }
+        @media screen and (max-width: 500px){
+          font-size: 21px;
+        }
+      }
+    }
+    .pb_color{
+      width: $wids3;
+      &:after{
+        content: '';
+        width: $wid4;
+        height: $width;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: $color;
+      }
+      .clip_box{
+        width: $width;
+        height: $width;
+        background: $color;
+        clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
+      }
+      
+    }
+  }
+}
+@mixin left_c($clo1){
+  .left_cont{
+    padding: 0 4%;
+    text-align: center;
+    span{
+      font-size: $fs7;
+      font-family: $fm2;
+    }
+    .ico_pic{
+      width: 40%;
+      margin: 0 auto;
+    }
+    h3{
+      font-size: $fs3;
+      font-family: $fm6;
+      margin: 2% 0 4%;
+      @media screen and (max-width: 1000px){
+        margin: 2% 0 3%;
+      }
+      @media screen and (max-width: 750px){
+        font-size: $fs4;
+      }
+    }
+    p{
+      font-family: $fm2;
+      font-size: $fs6;
+      margin: 4% 0;
+      @media screen and (max-width: 1000px){
+        margin: 0;
+      }
+    }
+    .btn{
+      @include btn(
+        $btn_color: $clo1
+      );
+      i{
+        margin: 3% auto 0;
+      }
+    }
+    @media screen and (max-width: 650px){
+      padding: 0;
+    }
+  }
+}
+@mixin right_c($clo2){
+  .right_cont{
+    p{
+      @extend .ttu;
+      padding: 2.4% 0;
+      font-family: $fm2;
+      font-size: 21px;
+      margin: 0;
+      border: 1px solid $clo2{
+        left: none;
+        right: none;
+        top: none;
+      };
+      &:first-child{
+        border-top: 1px solid $clo2;
+      }
+      @media screen and (max-width: 1000px){
+        padding: 2.4%;
+        border: {
+          left: 1px solid $white;
+          right: 1px solid $white;
+        }
+      }
+      @media screen and (max-width: 750px){
+        font-size: $fs6;
+        padding: 2%;
+      }
+    }
+  }
+}
+@mixin alter($clo){
+  li{
+    width: 50%;
+    color: $clo;
+    @media screen and (max-width: 1000px){
+      width: 100%;
+      margin-bottom: 4%;
+    }
+    @media screen and (max-width: 750px){
+      margin-bottom: 6%;
+    }
+  }
+  @include left_c($clo1: $clo);
+
+  @include right_c($clo2: $clo);
+}
+
+@mixin pub($height){
+  height: $height;
+  background: $color6;
+  position: relative;
+  .inbox_left{
+    width: 48%;
+    background: $color;
+    clip-path: polygon(0 0, 100% 0, 96% 100%, 0 100%);
+    @media screen and (max-width: 850px){
+      width: 70%;
+    }
+    @media screen and (max-width: 550px){
+      width: 80%;
+    }
+  }
+  .inbox_right{
+    width: 52%;
+    @media screen and (max-width: 850px){
+      width: 30%;
+    }
+    @media screen and (max-width: 550px){
+      width: 20%;
+    }
+  }
+  .tit_item{
+    position: absolute;
+    left: $wid;
+    transform: translate(-$wid);
+    h4{
+      color: $white;
+      font-size: $fs4;
+      font-family: $fm5;
+      @media screen and (max-width: 550px){
+        font-size: $fs5;
+      }
+    }
+    .btn{
+      @include btn($btn_color: $color);
+      i{
+        background: $color;
+        margin-bottom: 0;
+        &:before{
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+@mixin pro_txt{
+  .pro_txt{
+    @extend .anim;
+    background: $color;
+    padding: 14px 6px;
+    color: $white;
+    text-align: center;
+    cursor: pointer;
+    p{
+      font-weight: 200;
+      font-size: $fs7;
+      margin-bottom: 6px;
+      font-family: $fm2;
+    }
+    span{
+      font-weight: 600;
+      font-size: $fs7;
+      font-family: $fm2;
+    }
+  }
+}

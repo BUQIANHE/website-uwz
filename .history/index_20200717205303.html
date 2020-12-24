@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UWZ</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="js/jquery-1.9.1.min.js"></script>
+  <script src="js/touchslider.js"></script>
+  <script src="js/other.js"></script>
+</head>
+<body>
+  <!-- head nav -->
+  <header class="nav_bar">
+    <div class="in_box hei">
+      <ul class="nb_items width flex-sb hei">
+        <li class="nb_list flex logo_li">
+          <a href="index.html" class="logo flex">
+            <img src="images/logo.png" alt="logo" class="black_logo have">
+          </a>
+        </li>
+        <li class="nb_list flex-sb nb_nav">
+          <a href="javascript:;" class="iconfont icon-menuicons-menu"></a>
+          <div class="mob_drop_box flex">
+            <nav class="flex-sb">
+              <li class="nav_list flex hei home"><a href="index.html" class="pub_hover"> Home </a></li>
+              <li class="nav_list flex hei"><a href="product.html" class="pub_hover flex"> Product</a></li>
+              <li class="nav_list flex hei"><a href="about.html" class="pub_hover flex">About us</a></li>
+              <li class="nav_list flex hei"><a href="news.html" class="pub_hover flex">News</a> </li>
+              <li class="nav_list flex hei"><a href="download.html" class="pub_hover">Download</a></li>
+              <li class="nav_list flex hei"><a href="feedback.html" class="pub_hover">Feedback</a></li>
+              <li class="nav_list flex hei"><a href="contact.html" class="pub_hover"> Contact </a></li>
+              <li class="email flex"><a href="mailto:sales@uweldhvac.com" class="ttu flex"><i class="iconfont icon-youxiangicon"></i> sales@uweldhvac.com</a></li>
+            </nav>
+            <div class="email flex"><a href="mailto:sales@uweldhvac.com" class="ttu flex"><i class="iconfont icon-youxiangicon"></i>sales@uweldhvac.com</a></div>
+            <a class="search_btn ttu flex"><i class='iconfont icon-search'></i>&nbsp;Search</a>
+            <form action="" class="search_form" id="search_form">
+              <input type="text" name="key" class="top_search">
+              <button type="button" class="search_btn1 iconfont icon-search"></button>
+            </form>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="in_box pro_mn hei">
+      <ul class="pmn_items flex-sb wid hei">
+        Select Series
+        <div class="li_box flex-sb wid hei">
+          <li class="pmn_list flex">
+            <a href="product.html">Manifolds & Gauges</a>
+            <ul class="drop_items">
+              <li class="drop_list">
+                <a href="product.html">Manifolds</a>
+              </li>
+              <li class="drop_list">
+                <a href="product.html">Gauges</a>
+              </li>
+              <li class="drop_list">
+                <a href="product.html">Manifolds Parts</a>
+              </li>
+            </ul>
+          </li>
+          <li class="pmn_list flex">
+            <a href="product.html">Vacuum Pumps</a>
+          </li>
+          <li class="pmn_list flex">
+            <a href="product.html">Other Refrigerant Tools</a>
+          </li>
+          <li class="pmn_list flex">
+            <a href="product.html">Welding & Soldering Tools</a>
+          </li>
+          <li class="pmn_list flex">
+            <a href="product.html">Leak Detection</a>
+          </li>
+          <li class="pmn_list flex">
+            <a href="product.html">Tubing Tools </a>
+          </li>
+          <li class="pmn_list flex">
+            <a href="product.html">Parts & Accessories</a>
+          </li>
+        </div>
+        <i class="iconfont icon-down"></i>
+      </ul>
+    </div>
+  </header>
+
+  <!-- banner -->
+  <div class="banner-box banner">
+    <div class="swipe">
+      <ul class="banner" id='slider4'>
+        <li class="banner-list">
+          <a href="javascript:;"><img src="images/in_ban.jpg" alt=""></a>
+          <div class="banner-cont">
+            <div class="banc_inner wid flex">
+              <h4 class="ttu">Portable recovery<br>
+                units and accessories </h4>
+              <p class=ban_desc>for commercial, industrial and<br>
+                residential jobs</p>
+              <a href="product.html" class="btn"><i class="iconfont icon-right flex"></i><span>Take more</span></a>
+            </div>
+          </div>
+        </li>
+        <li class="banner-list">
+          <a href="javascript:;"><img src="images/in_ban.jpg" alt=""></a>
+          <div class="banner-cont">
+            <div class="banc_inner wid flex">
+              <h4 class="ttu">Portable recovery<br>
+                units and accessories </h4>
+              <p class=ban_desc>for commercial, industrial and<br>
+                residential jobs</p>
+              <a href="product.html" class="btn"><i class="iconfont icon-right flex"></i><span>Take more</span></a>
+            </div>
+          </div>
+        </li>
+        <li class="banner-list">
+          <a href="javascript:;"><img src="images/in_ban.jpg" alt=""></a>
+          <div class="banner-cont">
+            <div class="banc_inner wid flex">
+              <h4 class="ttu">Portable recovery<br>
+                units and accessories </h4>
+              <p class=ban_desc>for commercial, industrial and<br>
+                residential jobs</p>
+              <a href="product.html" class="btn"><i class="iconfont icon-right flex"></i><span>Take more</span></a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div id="pagenavi" class="flex">
+      <a href="#" class="">1</a>
+      <a href="#" class="active">2</a>
+      <a href="#" class="">3</a>
+    </div>
+  </div>
+  <script>
+    console=window.console || {dir:new Function(),log:new Function()};
+    var active=0,
+    as=document.getElementById('pagenavi').getElementsByTagName('a');
+    for(var i=0;i<as.length;i++){
+      (function(){
+        var j=i;
+        as[i].onclick=function(){
+          t4.slide(j);
+          return false;
+        }
+      })();
+    }
+    var t4=new TouchSlider('slider4',{speed:600, direction:0, interval:6000, fullsize:true});
+    t4.on('before',function(m,n){
+      as[m].className='';
+      as[n].className='active';
+    })
+  </script>
+
+
+  <!-- pub box -->
+  <div class="pub_box">
+    <ul class="pb_item wid flex hei">
+      <li class="pb_tit hei"></li>
+      <li class="pb_color hei">
+        <div class="clip_box"></div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- who we are -->
+  <div class="about_box">
+    <a><img src="images/in_pic1.jpg" alt=""></a>
+    <ul class="cont_box flex wid">
+      <li class="left_cont">
+        <span class="ttu">Who we are</span>
+        <h3 class="ttu">Major started in 2002</h3>
+        <p>Autokool Ltd was established in 2002 and is located in the 
+          heart of the country with easy access to main road and 
+          rail networks being adjacent to the A1 at Markham Moor 
+          in Nottinghamshire.In the early days 
+          we serviced car air conditioning systems on a mobile basis. 
+        </p>
+        <a href="about.html" class="btn"><i class="iconfont icon-right flex"></i></a>
+      </li>
+      <li class="right_cont">
+        <p>Exceptional Prices.</p>
+        <p>Quality Commitment.</p>
+        <p>Outstanding Customer service.</p>
+        <p>Company Abilities</p>
+      </li>
+    </ul>
+  </div>
+
+  <!-- production -->
+  <!-- <div class="about_box">
+    <a class="left_imgs"><img src="images/in_pic21.jpg" alt=""></a>
+    <ul class="cont_box flex wid reverse">
+      <li class="left_cont">
+        <span class="ttu">Who we are</span>
+        <h3 class="ttu">Professional Production</h3>
+        <p>Autokool Ltd was established in 2002 and is located in the 
+          heart of the country with easy access to main road and 
+          rail networks being adjacent to the A1 at Markham Moor 
+          in Nottinghamshire.In the early days 
+          we serviced car air conditioning systems on a mobile basis. 
+        </p>
+        <a href="product.html" class="btn"><i class="iconfont icon-right flex"></i></a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="about_box">
+    <a class="right_imgs"><img src="images/in_pic31.jpg" alt=""></a>
+    <ul class="cont_box flex wid offer">
+      <li class="left_cont">
+        <span class="ttu">What we offer</span>
+        <h3 class="ttu">What we offer</h3>
+        <p>We know that as a busy business owner or technician 
+          you don't have the time to drive all over town 
+          looking for the tools you need.  
+        </p>
+        <p class="ico_pic"><img src="images/in_ico.png" alt=""></p>
+        <a href="about.html" class="btn"><img src="images/arrow.png" alt=""></a>
+      </li>
+    </ul>
+  </div> -->
+
+  <!-- class  -->
+  <!-- <ul class="menu_items flex-sb wid">
+    <li class="mn_list">
+      <a href="product.html"><img src="images/pro1.jpg" alt=""></a>
+      <div class="menu_cont">
+        <h4 class="ttu">Manifolds & Gauges</h4>
+        <p class="mn_desc fhd3">
+          Our aim is to be offering our customers the best range of Air Conditioning and Refrigeration Tools available.
+        </p>
+        <a href="product.html" class="btn"><i class="iconfont icon-right flex"></i><span class="ttu">Take more</span></a>
+      </div>
+    </li>
+    <li class="mn_list">
+      <a href="product.html"><img src="images/pro2.jpg" alt=""></a>
+      <div class="menu_cont">
+        <h4 class="ttu">Vacuum Pumps</h4>
+        <p class="mn_desc fhd3">
+          Our aim is to be offering our customers the best range of Air Conditioning and Refrigeration Tools available.
+        </p>
+        <a href="product.html" class="btn"><i class="iconfont icon-right flex"></i><span class="ttu">Take more</span></a>
+      </div>
+    </li>
+    <li class="mn_list">
+      <a href="product.html"><img src="images/pro3.jpg" alt=""></a>
+      <div class="menu_cont">
+        <h4 class="ttu">Other Refrigerant Tools</h4>
+        <p class="mn_desc fhd3">
+          Our aim is to be offering our customers the best range of Air Conditioning and Refrigeration Tools available.
+        </p>
+        <a href="product.html" class="btn"><i class="iconfont icon-right flex"></i><span class="ttu">Take more</span></a>
+      </div>
+    </li>
+    <li class="mn_list">
+      <a href="product.html"><img src="images/pro4.jpg" alt=""></a>
+      <div class="menu_cont">
+        <h4 class="ttu">Welding & Soldering Tools</h4>
+        <p class="mn_desc fhd3">
+          Our aim is to be offering our customers the best range of Air Conditioning and Refrigeration Tools available.
+        </p>
+        <a href="product.html" class="btn"><i class="iconfont icon-right flex"></i><span class="ttu">Take more</span></a>
+      </div>
+    </li>
+    <li class="mn_list">
+      <a href="product.html"><img src="images/pro5.jpg" alt=""></a>
+      <div class="menu_cont">
+        <h4 class="ttu">Leak Detection</h4>
+        <p class="mn_desc fhd3">
+          Our aim is to be offering our customers the best range of Air Conditioning and Refrigeration Tools available.
+        </p>
+        <a href="product.html" class="btn"><i class="iconfont icon-right flex"></i><span class="ttu">Take more</span></a>
+      </div>
+    </li>
+    <li class="mn_list">
+      <a href="product.html"><img src="images/pro6.jpg" alt=""></a>
+      <div class="menu_cont">
+        <h4 class="ttu">Tubing Tools</h4>
+        <p class="mn_desc fhd3">
+          Our aim is to be offering our customers the best range of Air Conditioning and Refrigeration Tools available.
+        </p>
+        <a href="product.html" class="btn"><i class="iconfont icon-right flex"></i><span class="ttu">Take more</span></a>
+      </div>
+    </li>
+  </ul> -->
+
+  <!-- pub title -->
+  <div class="pub_tit flex">
+    <div class="inbox_left hei"></div>
+    <div class="inbox_right hei"></div>
+    <ul class="tit_item flex-sb wid hei">
+      <li><h4 class="ttu">Recommended products</h4></li>
+      <li><a href="product.html" class="btn"><i class="iconfont icon-right flex"></i></a></li>
+    </ul>
+  </div>
+
+  <!-- pro -->
+  <!-- <ul class="pro_items wid flex-sb">
+    <li class="pro_list">
+      <a href="pro_det.html"><img src="images/pros1.jpg" alt=""></a>
+      <div class="pro_txt">
+        <p>Mastercool 69350-2V-UK Twin Turbo Refrigerant Recycling Machine</p>
+        <span class="ttu">UW300-001</span>
+      </div>
+    </li>
+    <li class="pro_list">
+      <a href="pro_det.html"><img src="images/pros2.jpg" alt=""></a>
+      <div class="pro_txt">
+        <p>Mastercool 69350-2V-UK Twin Turbo Refrigerant Recycling Machine</p>
+        <span class="ttu">UW300-001</span>
+      </div>
+    </li>
+    <li class="pro_list">
+      <a href="pro_det.html"><img src="images/pros3.jpg" alt=""></a>
+      <div class="pro_txt">
+        <p>Mastercool 69350-2V-UK Twin Turbo Refrigerant Recycling Machine</p>
+        <span class="ttu">UW300-001</span>
+      </div>
+    </li>
+    <li class="pro_list">
+      <a href="pro_det.html"><img src="images/pros4.jpg" alt=""></a>
+      <div class="pro_txt">
+        <p>Mastercool 69350-2V-UK Twin Turbo Refrigerant Recycling Machine</p>
+        <span class="ttu">UW300-001</span>
+      </div>
+    </li>
+    <li class="pro_list">
+      <a href="pro_det.html"><img src="images/pros1.jpg" alt=""></a>
+      <div class="pro_txt">
+        <p>Mastercool 69350-2V-UK Twin Turbo Refrigerant Recycling Machine</p>
+        <span class="ttu">UW300-001</span>
+      </div>
+    </li>
+    <li class="pro_list">
+      <a href="pro_det.html"><img src="images/pros2.jpg" alt=""></a>
+      <div class="pro_txt">
+        <p>Mastercool 69350-2V-UK Twin Turbo Refrigerant Recycling Machine</p>
+        <span class="ttu">UW300-001</span>
+      </div>
+    </li>
+    <li class="pro_list">
+      <a href="pro_det.html"><img src="images/pros3.jpg" alt=""></a>
+      <div class="pro_txt">
+        <p>Mastercool 69350-2V-UK Twin Turbo Refrigerant Recycling Machine</p>
+        <span class="ttu">UW300-001</span>
+      </div>
+    </li>
+    <li class="pro_list">
+      <a href="pro_det.html"><img src="images/pros4.jpg" alt=""></a>
+      <div class="pro_txt">
+        <p>Mastercool 69350-2V-UK Twin Turbo Refrigerant Recycling Machine</p>
+        <span class="ttu">UW300-001</span>
+      </div>
+    </li>
+  </ul> -->
+
+  <!-- foot and letter news -->
+  <!-- <div class="letter_news">
+    <ul class="let_items flex wid">
+      <h3 class="ttu">Latest news</h3>
+      <li class="news_info">
+        <span>20.06.20</span>
+        <p>127th Canton Fair scheduled online from June 15 to 24</p>
+      </li>
+      <li><a href="product.html" class="btn"><i class="iconfont icon-right flex"></i></a></li>
+    </ul>
+  </div> -->
+
+  <!-- footer -->
+  <!-- <footer class="footer">
+    <div class="fot_box wid">
+      <ul class="flex-sb fot_items">
+        <li class="hava">
+          <h4 class="fl_tit ttu">UWELD HAVA</h4>
+          <p><b>A:</b> 5F Lishi Plaza, No.61 Huifeng East Road, Ningbo, China.</p>
+          <p><b>M:</b> 0086-13905743873</p>
+          <p><b>T:</b> 0086-574-88127201</p>
+          <p><b>E:</b> <a href="nailto:sales@uweldhvac.com">sales@uweldhvac.com</a></p>
+          <div class="scoail flex">
+            <a href="" class="iconfont icon-twitter flex"></a>
+            <a href="" class="iconfont icon-facebook flex"></a>
+          </div>
+        </li>
+        <li class="main_menu">
+          <h4 class="fl_tit ttu">Main menu</h4>
+          <a href="index.html">Home</a>
+          <a href="about.html">About us</a>
+          <a href="news.html">News & Events</a>
+          <a href="feedback.html">Feedback</a>
+          <a href="contact.html">Contact</a>
+        </li>
+        <li class="pro_cls">
+          <h4 class="fl_tit ttu">Product Catalogue</h4>
+          <a href="product.html">Manifolds & Gauges</a>
+          <a href="product.html">Vacuum Pumps</a>
+          <a href="product.html">Other Refrigerant Tools</a>
+          <a href="product.html">Welding & Soldering Tools</a>
+          <a href="product.html">Leak Detection</a>
+          <a href="product.html">Tubing Tools</a>
+          <a href="product.html">Parts & Accessories</a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <ul class="copyright flex-sb">
+    <li class="cp_list wid flex-sb">
+      <p class="flex-sb"><span>© Copyright UWELD Ltd 2020</span>  <a href="">XML</a> | <a href="">Siitemap</a></p>
+      <select name="" id="">
+        <option value="">Links</option>
+        <option value="">2</option>
+      </select>
+      <p>Website Supported by ZIYUE</p>
+    </li>
+  </ul> -->
+
+</body>
+</html>

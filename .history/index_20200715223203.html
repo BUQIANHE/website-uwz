@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UWZ</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="js/jquery-1.9.1.min.js"></script>
+  <script src="js/touchslider.js"></script>
+</head>
+<body>
+  <!-- head nav -->
+  <header class="nav_bar">
+    <div class="in_box hei">
+      <ul class="nb_items width flex-sb hei">
+        <li class="nb_list flex logo_li">
+          <a href="index.html" class="logo flex">
+            <img src="images/logo.png" alt="logo" class="black_logo have">
+          </a>
+        </li>
+        <li class="nb_list flex-sb nb_nav">
+          <a href="javascript:;" class="iconfont icon-menuicons-menu"></a>
+          <nav class="flex-sb">
+            <li class="nav_list flex hei home"><a href="index.html" class="pub_hover"> Home </a></li>
+            <li class="nav_list flex hei"><a href="product.html" class="pub_hover flex"> Product</a></li>
+            <li class="nav_list flex hei"><a href="about.html" class="pub_hover flex">About us</a></li>
+            <li class="nav_list flex hei"><a href="news.html" class="pub_hover flex">News</a> </li>
+            <li class="nav_list flex hei"><a href="download.html" class="pub_hover">Download</a></li>
+            <li class="nav_list flex hei"><a href="feedback.html" class="pub_hover">Feedback</a></li>
+            <li class="nav_list flex hei"><a href="contact.html" class="pub_hover"> Contact </a></li>
+          </nav>
+          <dic class="email flex"><a href="mailto:sales@uweldhvac.com" class="iconfont icon-youxiangicon ttu">sales@uweldhvac.com</a></dic>
+          <a class="search_btn iconfont icon-search ttu flex">Search</a>
+          <form action="" class="search_form" id="search_form">
+            <input type="text" name="key" class="top_search">
+            <button type="button" class="search_btn1 iconfont icon-search"></button>
+          </form>
+
+        </li>
+      </ul>
+    </div>
+    <div class="in_box pro_mn hei">
+      <ul class="pmn_items flex-sb wid hei">
+        <li class="pmn_list flex">
+          <a href="product.html">Manifolds & Gauges</a>
+          <ul class="drop_items">
+            <li class="drop_list">
+              <a href="product.html">Manifolds</a>
+            </li>
+            <li class="drop_list">
+              <a href="product.html">Gauges</a>
+            </li>
+            <li class="drop_list">
+              <a href="product.html">Manifolds Parts</a>
+            </li>
+          </ul>
+        </li>
+        <li class="pmn_list flex">
+          <a href="product.html">Vacuum Pumps</a>
+        </li>
+        <li class="pmn_list flex">
+          <a href="product.html">Other Refrigerant Tools</a>
+        </li>
+        <li class="pmn_list flex">
+          <a href="product.html">Welding & Soldering Tools</a>
+        </li>
+        <li class="pmn_list flex">
+          <a href="product.html">Leak Detection</a>
+        </li>
+        <li class="pmn_list flex">
+          <a href="product.html">Tubing Tools </a>
+        </li>
+        <li class="pmn_list flex">
+          <a href="product.html">Parts & Accessories</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- banner -->
+  <div class="banner-box banner">
+    <div class="swipe">
+      <ul class="banner" id='slider4'>
+        <li class="banner-list">
+          <a href="javascript:;"><img src="images/in_ban.jpg" alt=""></a>
+          <div class="banner-cont">
+            <div class="banc_inner wid flex">
+              <h4 class="ttu">Portable recovery<br>
+                units and accessories </h4>
+              <p class="ttu">for commercial, industrial and<br>
+                residential jobs</p>
+              <a href="product.html" class="btn flex ani"><span>Take more</span></a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div id="pagenavi" class="flex">
+      <a href="#" class="">1</a>
+      <a href="#" class="active">2</a>
+      <a href="#" class="">3</a>
+    </div>
+  </div>
+  <script type="text/javascript">
+    console=window.console || {dir:new Function(),log:new Function()};
+    var active=0,
+      as=document.getElementById('pagenavi').getElementsByTagName('a');
+      for(var i=0;i<as.length;i++){
+        (function(){
+          var j=i;
+          as[i].onclick=function(){
+            t4.slide(j);
+            return false;
+          }
+        })();
+      }
+      var t4=new TouchSlider('slider4',{speed:600, direction:0, interval:6000, fullsize:true});
+      t4.on('before',function(m,n){
+        as[m].className='';
+        as[n].className='active';
+      })
+  </script>
+
+
+
+</body>
+</html>
